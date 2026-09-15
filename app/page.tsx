@@ -1,4 +1,9 @@
+"use client";
+
+import { useState } from "react";
+
 export default function Home() {
+  const [menuOpen, setMenuOpen] = useState(false);
   return (
     <main>
 
@@ -41,7 +46,7 @@ export default function Home() {
           </div>
 
 
-          {/* MENU */}
+          {/* MENU DESKTOP */}
 
 <nav className="nav-menu">
 
@@ -78,6 +83,86 @@ export default function Home() {
   </a>
 
 </nav>
+
+
+{/* TOMBOL MENU PONSEL */}
+
+<button
+  type="button"
+  className="mobile-menu-button"
+  onClick={() => setMenuOpen(!menuOpen)}
+  aria-label="Buka menu"
+  aria-expanded={menuOpen}
+>
+  <span></span>
+  <span></span>
+  <span></span>
+</button>
+
+
+{/* MENU PONSEL */}
+
+{menuOpen && (
+  <nav className="mobile-nav-menu">
+
+    <a
+      href="/"
+      onClick={() => setMenuOpen(false)}
+    >
+      Beranda
+    </a>
+
+    <a
+      href="/organisasi"
+      onClick={() => setMenuOpen(false)}
+    >
+      Organisasi
+    </a>
+
+    <a
+      href="/pengurus-provinsi"
+      onClick={() => setMenuOpen(false)}
+    >
+      Pengurus Provinsi
+    </a>
+
+    <a
+      href="/cabang"
+      onClick={() => setMenuOpen(false)}
+    >
+      Cabang
+    </a>
+
+    <a
+      href="/keanggotaan"
+      onClick={() => setMenuOpen(false)}
+    >
+      Keanggotaan
+    </a>
+
+    <a
+      href="/ukt"
+      onClick={() => setMenuOpen(false)}
+    >
+      UKT
+    </a>
+
+    <a
+      href="/agenda"
+      onClick={() => setMenuOpen(false)}
+    >
+      Agenda
+    </a>
+
+    <a
+      href="/prestasi"
+      onClick={() => setMenuOpen(false)}
+    >
+      Prestasi
+    </a>
+
+  </nav>
+)}
 
         </div>
 
