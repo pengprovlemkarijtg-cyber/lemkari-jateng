@@ -10,20 +10,39 @@ import {
 
 type JenisAnggota = "berwarna" | "hitam";
 
+type AnggotaBerwarna = {
+  nama: string;
+  nomorInduk: string | null;
+  cabang: string | null;
+  dojo: string | null;
+  hasilSabuk: string | null;
+  hasilKyu: string | null;
+};
+
+type AnggotaHitam = {
+  nama: string;
+  nomorInduk: string | null;
+  cabang: string | null;
+};
+
 export default function KeanggotaanPage() {
   const [jenis, setJenis] =
     useState<JenisAnggota>("berwarna");
 
   const [search, setSearch] = useState("");
 
-  // DATA YANG AKAN DIGUNAKAN
+  /*
+   * DATA YANG DIGUNAKAN
+   */
   const daftar =
     jenis === "berwarna"
-      ? dataSabukBerwarna
-      : dataSabukHitam;
+      ? (dataSabukBerwarna as AnggotaBerwarna[])
+      : (dataSabukHitam as AnggotaHitam[]);
 
-  // PENCARIAN
-  const kataKunci = search
+  /*
+   * PENCARIAN
+   */
+  const kataKunci = String(search)
     .toLowerCase()
     .trim();
 
@@ -32,18 +51,23 @@ export default function KeanggotaanPage() {
       return false;
     }
 
-    const nama =
-      anggota.nama?.toLowerCase() || "";
+    const nama = String(
+      anggota.nama ?? ""
+    ).toLowerCase();
 
-    const nomorInduk =
-      anggota.nomorInduk?.toLowerCase() || "";
+    const nomorInduk = String(
+      anggota.nomorInduk ?? ""
+    ).toLowerCase();
 
-    const cabang =
-      anggota.cabang?.toLowerCase() || "";
+    const cabang = String(
+      anggota.cabang ?? ""
+    ).toLowerCase();
 
     const dojo =
-      "dojo" in anggota
-        ? anggota.dojo?.toLowerCase() || ""
+      jenis === "berwarna"
+        ? String(
+            (anggota as AnggotaBerwarna).dojo ?? ""
+          ).toLowerCase()
         : "";
 
     return (
@@ -54,7 +78,9 @@ export default function KeanggotaanPage() {
     );
   });
 
-  // HANYA TAMPILKAN 50 HASIL
+  /*
+   * HANYA TAMPILKAN 50 HASIL
+   */
   const hasilTampil =
     hasilPencarian.slice(0, 50);
 
@@ -62,19 +88,19 @@ export default function KeanggotaanPage() {
     <main className="keanggotaan-page">
 
       {/* =========================
-          HERO
+          KEMBALI KE BERANDA
       ========================== */}
 
-          {/* KEMBALI KE BERANDA */}
+      <div className="keanggotaan-back-home">
+        <Link href="/">
+          ← Kembali ke Beranda
+        </Link>
+      </div>
 
-    <div className="keanggotaan-back-home">
 
-      <Link href="/">
-        ← Kembali ke Beranda
-      </Link>
-
-    </div>
-
+      {/* =========================
+          HERO
+      ========================== */}
 
       <section className="keanggotaan-hero">
 
@@ -97,7 +123,6 @@ export default function KeanggotaanPage() {
         </div>
 
       </section>
-      
 
 
       {/* =========================
@@ -410,53 +435,60 @@ export default function KeanggotaanPage() {
                               </div>
 
 
-                              {jenis === "berwarna" &&
-                                "dojo" in anggota && (
-                                  <>
+                              {jenis === "berwarna" && (
 
-                                    <div className="detail-row">
+                                <>
 
-                                      <span>
-                                        Dojo
-                                      </span>
+                                  <div className="detail-row">
 
-                                      <strong>
-                                        {anggota.dojo ||
-                                          "-"}
-                                      </strong>
+                                    <span>
+                                      Dojo
+                                    </span>
 
-                                    </div>
+                                    <strong>
+                                      {
+                                        (anggota as AnggotaBerwarna)
+                                          .dojo || "-"
+                                      }
+                                    </strong>
 
-
-                                    <div className="detail-row">
-
-                                      <span>
-                                        Hasil Sabuk
-                                      </span>
-
-                                      <strong className="sabuk-text">
-                                        {anggota.hasilSabuk ||
-                                          "-"}
-                                      </strong>
-
-                                    </div>
+                                  </div>
 
 
-                                    <div className="detail-row">
+                                  <div className="detail-row">
 
-                                      <span>
-                                        Hasil Kyu
-                                      </span>
+                                    <span>
+                                      Hasil Sabuk
+                                    </span>
 
-                                      <strong className="kyu-text">
-                                        {anggota.hasilKyu ||
-                                          "-"}
-                                      </strong>
+                                    <strong className="sabuk-text">
+                                      {
+                                        (anggota as AnggotaBerwarna)
+                                          .hasilSabuk || "-"
+                                      }
+                                    </strong>
 
-                                    </div>
+                                  </div>
 
-                                  </>
-                                )}
+
+                                  <div className="detail-row">
+
+                                    <span>
+                                      Hasil Kyu
+                                    </span>
+
+                                    <strong className="kyu-text">
+                                      {
+                                        (anggota as AnggotaBerwarna)
+                                          .hasilKyu || "-"
+                                      }
+                                    </strong>
+
+                                  </div>
+
+                                </>
+
+                              )}
 
                             </div>
 
