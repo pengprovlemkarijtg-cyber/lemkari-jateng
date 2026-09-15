@@ -35,6 +35,7 @@ const dataCabang: Record<
 > = {
   "kabupaten-banjarnegara": {
     nama: "Kabupaten Banjarnegara",
+    wilayah: "Kabupaten Banjarnegara",
     ketua: "Nama Ketua",
     sekretaris: "Nama Sekretaris",
     bendahara: "Nama Bendahara",
@@ -45,6 +46,7 @@ const dataCabang: Record<
 
   "kabupaten-banyumas": {
     nama: "Kabupaten Banyumas",
+    wilayah: "Kabupaten Banyumas",
     ketua: "Nama Ketua",
     sekretaris: "Nama Sekretaris",
     bendahara: "Nama Bendahara",
@@ -55,6 +57,7 @@ const dataCabang: Record<
 
   "kabupaten-blora": {
     nama: "Kabupaten Blora",
+    wilayah: "Kabupaten Blora",
     ketua: "Nama Ketua",
     sekretaris: "Nama Sekretaris",
     bendahara: "Nama Bendahara",
@@ -65,6 +68,7 @@ const dataCabang: Record<
 
   "kabupaten-batang": {
     nama: "Kabupaten Batang",
+    wilayah: "Kabupaten Batang",
     ketua: "Nama Ketua",
     sekretaris: "Nama Sekretaris",
     bendahara: "Nama Bendahara",
@@ -75,6 +79,7 @@ const dataCabang: Record<
 
   "kabupaten-cilacap": {
     nama: "Kabupaten Cilacap",
+    wilayah: "Kabupaten Cilacap",
     ketua: "Nama Ketua",
     sekretaris: "Nama Sekretaris",
     bendahara: "Nama Bendahara",
@@ -85,6 +90,7 @@ const dataCabang: Record<
 
   "kabupaten-demak": {
     nama: "Kabupaten Demak",
+    wilayah: "Kabupaten Demak",
     ketua: "Nama Ketua",
     sekretaris: "Nama Sekretaris",
     bendahara: "Nama Bendahara",
@@ -95,6 +101,7 @@ const dataCabang: Record<
 
   "kabupaten-grobogan": {
     nama: "Kabupaten Grobogan",
+    wilayah: "Kabupaten Grobogan",
     ketua: "Nama Ketua",
     sekretaris: "Nama Sekretaris",
     bendahara: "Nama Bendahara",
@@ -105,6 +112,7 @@ const dataCabang: Record<
 
   "kabupaten-jepara": {
     nama: "Kabupaten Jepara",
+    wilayah: "Kabupaten Jepara",
     ketua: "Nama Ketua",
     sekretaris: "Nama Sekretaris",
     bendahara: "Nama Bendahara",
@@ -115,6 +123,7 @@ const dataCabang: Record<
 
   "kabupaten-magelang": {
     nama: "Kabupaten Magelang",
+    wilayah: "Kabupaten Magelang",
     ketua: "Nama Ketua",
     sekretaris: "Nama Sekretaris",
     bendahara: "Nama Bendahara",
@@ -124,7 +133,8 @@ const dataCabang: Record<
   },
 
   "kota-magelang": {
-    nama: "Kabupaten Magelang",
+    nama: "Kota Magelang",
+    wilayah: "Kota Magelang",
     ketua: "Nama Ketua",
     sekretaris: "Nama Sekretaris",
     bendahara: "Nama Bendahara",
@@ -135,6 +145,7 @@ const dataCabang: Record<
 
   "kabupaten-kebumen": {
     nama: "Kabupaten Kebumen",
+    wilayah: "Kabupaten Kebumen",
     ketua: "Nama Ketua",
     sekretaris: "Nama Sekretaris",
     bendahara: "Nama Bendahara",
@@ -145,6 +156,7 @@ const dataCabang: Record<
 
   "kabupaten-kendal": {
     nama: "Kabupaten Kendal",
+    wilayah: "Kabupaten Kendal",
     ketua: "Nama Ketua",
     sekretaris: "Nama Sekretaris",
     bendahara: "Nama Bendahara",
@@ -155,6 +167,7 @@ const dataCabang: Record<
 
   "kabupaten-klaten": {
     nama: "Kabupaten Klaten",
+    wilayah: "Kabupaten Klaten",
     ketua: "Nama Ketua",
     sekretaris: "Nama Sekretaris",
     bendahara: "Nama Bendahara",
@@ -165,6 +178,7 @@ const dataCabang: Record<
 
   "kabupaten-pekalongan": {
     nama: "Kabupaten Pekalongan",
+    wilayah: "Kabupaten Pekalongan",
     ketua: "Nama Ketua",
     sekretaris: "Nama Sekretaris",
     bendahara: "Nama Bendahara",
@@ -174,7 +188,8 @@ const dataCabang: Record<
   },
 
   "kota-pekalongan": {
-    nama: "Kota pekalongan",
+    nama: "Kota Pekalongan",
+    wilayah: "Kota Pekalongan",
     ketua: "Nama Ketua",
     sekretaris: "Nama Sekretaris",
     bendahara: "Nama Bendahara",
@@ -185,6 +200,7 @@ const dataCabang: Record<
 
   "kota-semarang": {
     nama: "Kota Semarang",
+    wilayah: "Kota Semarang",
     ketua: "Nama Ketua",
     sekretaris: "Nama Sekretaris",
     bendahara: "Nama Bendahara",
@@ -195,6 +211,7 @@ const dataCabang: Record<
 
   "kabupaten-kudus": {
     nama: "Kabupaten Kudus",
+    wilayah: "Kabupaten Kudus",
     ketua: "Nama Ketua",
     sekretaris: "Nama Sekretaris",
     bendahara: "Nama Bendahara",
@@ -205,6 +222,7 @@ const dataCabang: Record<
 
   "kabupaten-pati": {
     nama: "Kabupaten Pati",
+    wilayah: "Kabupaten Pati",
     ketua: "Nama Ketua",
     sekretaris: "Nama Sekretaris",
     bendahara: "Nama Bendahara",
@@ -215,6 +233,7 @@ const dataCabang: Record<
 
   "kabupaten-purbalingga": {
     nama: "Kabupaten Purbalingga",
+    wilayah: "Kabupaten Purbalingga",
     ketua: "Nama Ketua",
     sekretaris: "Nama Sekretaris",
     bendahara: "Nama Bendahara",
@@ -225,6 +244,7 @@ const dataCabang: Record<
 
   "kabupaten-sragen": {
     nama: "Kabupaten Sragen",
+    wilayah: "Kabupaten Sragen",
     ketua: "Nama Ketua",
     sekretaris: "Nama Sekretaris",
     bendahara: "Nama Bendahara",
@@ -235,6 +255,7 @@ const dataCabang: Record<
 
   "kabupaten-sukoharjo": {
     nama: "Kabupaten Sukoharjo",
+    wilayah: "Kabupaten Sukoharjo",
     ketua: "Nama Ketua",
     sekretaris: "Nama Sekretaris",
     bendahara: "Nama Bendahara",
@@ -245,6 +266,7 @@ const dataCabang: Record<
 
   "kota-surakarta": {
     nama: "Kota Surakarta",
+    wilayah: "Kota Surakarta",
     ketua: "Dwi Ariyatno, S.STP., M.A.P.",
     sekretaris: "Nama Sekretaris",
     bendahara: "Nama Bendahara",
@@ -255,6 +277,7 @@ const dataCabang: Record<
 
   "kabupaten-tegal": {
     nama: "Kabupaten Tegal",
+    wilayah: "Kabupaten Tegal",
     ketua: "Nama Ketua",
     sekretaris: "Nama Sekretaris",
     bendahara: "Nama Bendahara",
@@ -265,6 +288,7 @@ const dataCabang: Record<
 
   "kabupaten-temanggung": {
     nama: "Kabupaten Temanggung",
+    wilayah: "Kabupaten Temanggung",
     ketua: "Nama Ketua",
     sekretaris: "Nama Sekretaris",
     bendahara: "Nama Bendahara",
@@ -275,6 +299,7 @@ const dataCabang: Record<
 
   "kabupaten-wonosobo": {
     nama: "Kabupaten Wonosobo",
+    wilayah: "Kabupaten Wonosobo",
     ketua: "Nama Ketua",
     sekretaris: "Nama Sekretaris",
     bendahara: "Nama Bendahara",
@@ -283,7 +308,6 @@ const dataCabang: Record<
     email: "Email cabang akan ditambahkan",
   },
 };
-
 
 export default async function ProfilCabang({
   params,
